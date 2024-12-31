@@ -13,7 +13,7 @@ const photos = [
   { id: 3, src: "/imgs/Photography/Kampungku.jpg", alt: "Children playing ball in the village" },
   { id: 4, src: "/imgs/Photography/Kampungku 2_1.jpg", alt: "Beautiful ornamental plants" },
   { id: 5, src: "/imgs/Photography/Tetangga111.jpg", alt: "My neighbor's roof" },
-  { id: 6, src: "/imgs/Photography/anjay.png", alt: "beautiful sunset" },
+  { id: 6, src: "/imgs/Photography/anjay.png", alt: "Beautiful sunset" },
   { id: 7, src: "/imgs/Photography/2121.jpg", alt: "Sailing boat on the beach" },
 ];
 
@@ -33,19 +33,30 @@ const PhotographyPortfolio = () => {
       id="photography"
       onContextMenu={disableRightClick} // Disable right-click
     >
-      <div className="flex gap-4 flex-col sm:flex-row sm:items-center justify-between">
+      {/* Header Section */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <h2 className="text-3xl min-[430px]:text-4xl md:text-5xl font-bold dark:text-stone-200">
           My Photographs
         </h2>
 
-        <ShinyButton icon={<ChevronRight />} className="ml-auto">
-          <Link href="https://www.instagram.com/nawfaljr__" target="_blank">
-            All Photos
-          </Link>
-        </ShinyButton>
+        {/* Shiny Button under title on small devices */}
+        <div className="sm:ml-auto flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-0">
+          <ShinyButton icon={<ChevronRight />} className="ml-0 sm:ml-auto">
+            <Link href="https://www.instagram.com/nawfaljr__" target="_blank">
+              All Photos
+            </Link>
+          </ShinyButton>
+        </div>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-3 mt-10">
+      {/* Photos Grid */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-10"
+      >
         {photos.map((photo, index) => (
           <motion.div
             key={photo.id}
@@ -72,7 +83,7 @@ const PhotographyPortfolio = () => {
             </div>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </motion.div>
   );
 };
