@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    
+    /* Tambahan untuk scrolling yang lebih halus */
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* Untuk iOS */
+  }
+  
+  html::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari and Opera */
+  }
+
+  /* Tambahan untuk konten yang di-scroll */
+  body {
+    @apply overflow-x-hidden; /* Mencegah horizontal scroll */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Optional: Menambahkan efek smooth pada elemen yang bisa di-scroll */
+  .smooth-scroll {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+}
