@@ -9,8 +9,8 @@ const Footer = () => {
       id="contact"
     >
       <div>
-        <div className="space-y-8 p-10">
-          <h1 className="text-5xl font-bold max-w-2xl leading-[110%] relative z-10">
+        <div className="space-y-6 p-6 sm:space-y-8 sm:p-10">
+          <h1 className="text-3xl sm:text-5xl font-bold max-w-xl sm:max-w-2xl leading-[110%] relative z-10">
             Any discuss or collaborate?{" "}
             <Link
               href="mailto:nawfalirfan005@gmail.com"
@@ -26,17 +26,17 @@ const Footer = () => {
           </ShinyButton>
         </div>
 
-        <div className="mt-16 p-10 border-t border-dark-200 dark:border-white/10 flex flex-col md:flex-row justify-between gap-10 md:gap-0">
+        <div className="mt-10 sm:mt-16 p-6 sm:p-10 border-t border-dark-200 dark:border-white/10 flex flex-col md:flex-row justify-between gap-8 sm:gap-10">
           <div className="space-y-2.5">
-            <h3 className="text-xl font-bold relative z-10">
+            <h3 className="text-lg sm:text-xl font-bold relative z-10">
               <Link href="/">Nawfal</Link>
             </h3>
-            <p className="text-dark-200/70 dark:text-stone-200/70 relative z-10">
+            <p className="text-dark-200/70 dark:text-stone-200/70 relative z-10 text-sm sm:text-base">
               &copy; 2024 | All rights reserved.
             </p>
           </div>
 
-          <div className="flex justify-between gap-0 sm:gap-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-16">
             <ul className="space-y-2.5 relative z-10 text-sm sm:text-base">
               <li className="text-base sm:text-lg font-semibold">Navigate</li>
               <li className="text-dark-200/60 hover:text-dark-200 dark:text-white/50 dark:hover:text-white">
@@ -54,51 +54,36 @@ const Footer = () => {
             </ul>
 
             <ul className="space-y-2.5 relative z-10 text-sm sm:text-base">
-              <li className="text-lg font-semibold">Projects</li>
+              <li className="text-base sm:text-lg font-semibold">Projects</li>
               <li className="text-dark-200/60 hover:text-dark-200 dark:text-white/50 dark:hover:text-white">
-                <Link
-                  href="https://github.com/xFalzz/"
-                  target="_blank"
-                >
+                <Link href="https://github.com/xFalzz/" target="_blank">
                   Dusevoscho-MM2
                 </Link>
               </li>
               <li className="text-dark-200/60 hover:text-dark-200 dark:text-white/50 dark:hover:text-white">
-                <Link
-                  href="https://github.com/xFalzz/"
-                  target="_blank"
-                >
+                <Link href="https://github.com/xFalzz/" target="_blank">
                   Snake's
                 </Link>
               </li>
               <li className="text-dark-200/60 hover:text-dark-200 dark:text-white/50 dark:hover:text-white">
-                <Link
-                  href="https://github.com/xFalzz/QRQuick"
-                  target="_blank"
-                >
+                <Link href="https://github.com/xFalzz/QRQuick" target="_blank">
                   QRQuick
                 </Link>
               </li>
               <li className="text-dark-200/60 hover:text-dark-200 dark:text-white/50 dark:hover:text-white">
-                <Link
-                  href="https://github.com/xFalzz"
-                  target="_blank"
-                >
+                <Link href="https://github.com/xFalzz" target="_blank">
                   MoveiHub
                 </Link>
               </li>
               <li className="text-dark-200/60 hover:text-dark-200 dark:text-white/50 dark:hover:text-white">
-                <Link
-                  href="https://github.com/xFalzz"
-                  target="_blank"
-                >
+                <Link href="https://github.com/xFalzz" target="_blank">
                   SpotToSee
                 </Link>
               </li>
             </ul>
 
             <ul className="space-y-2.5 relative z-10 text-sm sm:text-base">
-              <li className="text-lg font-semibold">Socials</li>
+              <li className="text-base sm:text-lg font-semibold">Socials</li>
               <li className="text-dark-200/60 hover:text-dark-200 dark:text-white/50 dark:hover:text-white">
                 <Link
                   href="https://www.linkedin.com/in/nawfal-irfan/"
